@@ -1,0 +1,47 @@
+package org.lessons.java.shop;
+
+import java.util.Random;
+
+public class Prodotto {
+
+    private Random generator = new Random();
+
+    protected int codice = generator.nextInt(111111111, 999999999);
+    protected String nome;
+    protected String descrizione;
+    protected float prezzo;
+    protected float iva = 22;    
+
+    // public Prodotto (String nome, String descrizione, float prezzo, float iva){
+    //     this.codice = generator.nextInt(111111111, 999999999); 
+    //     this.nome = nome;
+    //     this.descrizione = descrizione;
+    //     this.prezzo = prezzo;
+    //     this.iva = iva;
+        
+    // };
+
+    // public Prodotto (String nome, String descrizione, float prezzo){
+    //     this.codice = generator.nextInt(111111111, 999999999); 
+    //     this.nome = nome;
+    //     this.descrizione = descrizione;
+    //     this.prezzo = prezzo;               
+    // };
+
+    public float getPrezzoBase (){
+        return this.prezzo;
+    };
+
+    public void setPrezzoBase (float prezzo){
+        this.prezzo = prezzo;
+    };
+
+    public float getPrezzoIvato (){
+        return this.prezzo + (this.prezzo * this.iva)/100;
+    }
+
+    public String getNomeCompleto (){
+        return this.codice + "-" + this.nome;
+    }
+
+}
