@@ -40,6 +40,14 @@ public class Prodotto {
         this.prezzo = prezzo;
     };
 
+    public String getDescrizione (){
+        return this.descrizione;
+    };
+
+    public void setDescrizione (String descrizione){
+        this.descrizione = descrizione;
+    };
+
     public float getPrezzoIvato (){
         return this.prezzo + (this.prezzo * this.iva)/100;
     };

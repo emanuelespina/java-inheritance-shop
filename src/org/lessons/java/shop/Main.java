@@ -7,6 +7,10 @@ public class Main {
             
        System.out.println(samsung.getPrezzoIvato());
 
+       samsung.setDescrizione("prova cambio descrizione");
+
+       System.out.println(samsung.getDescrizione());
+
     };       
 
 }
