@@ -6,27 +6,31 @@ public class Prodotto {
 
     private Random generator = new Random();
 
-    protected int codice = generator.nextInt(111111111, 999999999);
-    protected String nome;
-    protected String descrizione;
-    protected float prezzo;
-    protected float iva = 22;    
+    private int codice;
+    private String nome;
+    private String descrizione;
+    private float prezzo;
+    private float iva = 22;    
 
-    // public Prodotto (String nome, String descrizione, float prezzo, float iva){
-    //     this.codice = generator.nextInt(111111111, 999999999); 
-    //     this.nome = nome;
-    //     this.descrizione = descrizione;
-    //     this.prezzo = prezzo;
-    //     this.iva = iva;
+    public Prodotto (String nome, String descrizione, float prezzo, float iva){
+        this.codice = generator.nextInt(111111111, 999999999); 
+        this.nome = nome;
+        this.descrizione = descrizione;
+        this.prezzo = prezzo;
+        this.iva = iva;
         
-    // };
+    };
 
-    // public Prodotto (String nome, String descrizione, float prezzo){
-    //     this.codice = generator.nextInt(111111111, 999999999); 
-    //     this.nome = nome;
-    //     this.descrizione = descrizione;
-    //     this.prezzo = prezzo;               
-    // };
+    public Prodotto (String nome, String descrizione, float prezzo){
+         this.codice = generator.nextInt(111111111, 999999999); 
+         this.nome = nome;
+         this.descrizione = descrizione;
+         this.prezzo = prezzo;               
+    };
+
+    public Prodotto (){
+
+    };
 
     public float getPrezzoBase (){
         return this.prezzo;
@@ -38,10 +42,10 @@ public class Prodotto {
 
     public float getPrezzoIvato (){
         return this.prezzo + (this.prezzo * this.iva)/100;
-    }
+    };
 
     public String getNomeCompleto (){
         return this.codice + "-" + this.nome;
-    }
-
+    };
+    
 }

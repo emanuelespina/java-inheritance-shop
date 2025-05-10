@@ -3,11 +3,11 @@ package org.lessons.java.shop;
 public class Main {
     public static void main(String[] args) {
         
-       Televisori samsung = new Televisori("tv serie 9", "nuova televisione Oled retroilluminata", 1349, 22, 55, true);
+       Televisori samsung = new Televisori("TV serie 9", "tv oled con nuova tecnologia dei neri", 1300, 55, true);
+            
+       System.out.println(samsung.getPrezzoIvato());
 
-       
-
-    }
+    };       
 
 }
 

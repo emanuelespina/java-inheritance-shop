@@ -5,11 +5,12 @@ public class Televisori extends Prodotto {
     protected int pollici;
     protected boolean smarTv;
 
-    public Televisori(String nome, String descrizione, float prezzo, float iva, int pollici, boolean smarTv) {
-        this.nome = nome;
-        this.descrizione = descrizione;
-        this.prezzo = prezzo;
-        this.iva = iva;
+    public Televisori(String nome, String descrizione, float prezzo, int pollici, boolean smarTv) {
+        // this.nome = nome;
+        // this.descrizione = descrizione;
+        // this.prezzo = prezzo;
+        // this.iva = iva;
+        super(nome, descrizione, prezzo);
         this.pollici = pollici;
         this.smarTv = smarTv;
     };
