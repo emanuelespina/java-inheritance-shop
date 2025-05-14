@@ -12,6 +12,8 @@ public class Carrello {
 
         boolean addItems = true;
 
+        System.out.println(Codici.riempitore("12674"));
+
         while (addItems != false) {
 
             System.out.println("Vuoi aggiungere un'articolo al tuo carrello?");
@@ -110,13 +112,15 @@ public class Carrello {
 
             } else {
                 addItems = false;
-            }
-            ;
+            };
 
-        }
-        ;
+        };
 
         scanner.close();
+
+        
+
+        
 
     };
 
